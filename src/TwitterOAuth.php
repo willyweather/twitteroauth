@@ -175,8 +175,7 @@ class TwitterOAuth {
     /* Curl settings */
     $options = array(
       // CURLOPT_VERBOSE => TRUE,
-      CURLOPT_CAINFO => 'cacert.pem',
-      CURLOPT_CAPATH => __DIR__,
+      CURLOPT_CAINFO => __DIR__ . '/cacert.pem',
       CURLOPT_CONNECTTIMEOUT => $this->connecttimeout,
       CURLOPT_HEADER => FALSE,
       CURLOPT_HEADERFUNCTION => array($this, 'getHeader'),
